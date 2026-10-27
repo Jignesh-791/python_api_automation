@@ -1,5 +1,8 @@
-from utility import config
 import requests
+import time
+
+from utility import config
+
 
 def test_end_to_end(base_url):
     # Step 1: Create a new record
@@ -46,3 +49,14 @@ def test_end_to_end(base_url):
     assert update_response.status_code == 200
     assert update_body["data"]["data"]["price"] == 59.99
     assert update_body["data"]["data"]["name"] == "EndToEnd_Test Headphones Updated"
+
+    # Step 4: Delete the newly created record
+
+    time.sleep(2)  # Optional: Wait for a moment before deletion to ensure the update is processed
+    delete_response = requests.delete(
+        f'{base_url}/collections/products/records/{new_record_id}?project_id={config.project_id}',
+        headers=config.headers
+    )
+    # # delete_body = delete_response.json()
+    # print("Delete Response:", delete_body)
+    assert delete_response.status_code == 204

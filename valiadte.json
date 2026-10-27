@@ -1,0 +1,18 @@
+{
+  'data': {
+    'id': 'f65a0da5-4d84-42ec-bfc2-99e710d2731e',
+    'collection_id': 'b7993bd4-fb93-49ea-b66a-340b157109fa',
+    'project_id': 55866,
+    'app_user_id': None,
+    'created_by': 149141,
+    'created_at': '2026-10-25T11:23:18.880Z',
+    'updated_at': '2026-10-27T14:20:35.593Z',
+    'deleted_at': None,
+    'data': {
+      'name': 'Wirelesss_Test Headphones_JP',
+      'price': 55.98,
+      'category': 'Electronics',
+      'in_stock': True
+    }
+  }
+}
