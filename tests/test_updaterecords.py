@@ -18,6 +18,6 @@ def test_updaterecords(base_url):
 
     body_data = response.json()
     print(body_data)
-    assert response.status_code==200
+    assert response.status_code == 200
     assert body_data["data"]["data"]["price"] == 55.98
     assert body_data["data"]["data"]["name"] == "Wirelesss_Test Headphones_JP"
